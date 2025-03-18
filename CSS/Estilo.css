@@ -177,7 +177,7 @@ body {
 /* ----------------BANNER--------------- */
 
 .banner {
-    background-image: linear-gradient(100deg, #000000, #00000020), url('Imagenes/Carne-Asada-Parrilla.jpg');
+    background-image: linear-gradient(100deg, #000000, #00000020), url("../Imagenes/Banner.png");
     height: 60rem;
     background-size: cover;
     background-position: center;
@@ -482,9 +482,6 @@ img {
     line-height: 1.2;
     text-align: center;
 }
-
-
-
 
 
 
