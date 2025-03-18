@@ -1,0 +1,496 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #4b6382;
+    --background-color: #E6D8C7;
+    --dark-color: #000000;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body {
+    background-color: #F7F4F0; 
+}
+
+/* -----------UTILIDADES------------ */
+
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* ----------------HEADER--------------- */
+
+.container-hero {
+    background-color: var(--background-color);
+    padding: .5rem 3rem;
+    
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.customer-support {
+    display: flex;
+    align-items: center;
+    
+}
+
+.customer-support i{
+    font-size: 1.5rem;
+    
+}
+
+.content-customer-support {
+    display: flex;
+    flex-direction: inherit;
+    font-size: 1.3rem;
+}
+
+.customer-contact {
+    display: flex;
+    align-items: center;
+    
+}
+
+.customer-contact i{
+    font-size: 1.5rem;
+    margin-left: 0;
+
+}
+
+.content-customer-contact {
+    display: flex;
+    flex-direction: inherit;
+    font-size: 1.3rem;
+}
+
+.container-user {
+    display: flex;
+    margin-left: auto;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.container-user .fa-user{
+    font-size: 2rem;
+    color: var(--primary-color);
+    justify-content: flex-end;
+    padding-right: 2.5rem;
+    border-right: 1px solid #e2e2e2;
+}
+
+
+/* ----------------NAVBAR--------------- */
+.container-navbar {
+    background-color: var(--primary-color);
+
+    padding: 0 3rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.navbar i.fa-bars{
+    display: none;
+
+    font-size: 2.5rem; /* Ajusta el tamaño del ícono */
+    color: var(--dark-color);
+    margin-left: 1rem; /* Separación adicional desde el borde izquierdo */
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    gap: 10rem;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--dark-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.menu a::after{
+    content: '';
+    width: 1.5rem;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -3px;
+    left: 50%; 
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.menu a:hover::after{
+    opacity: 1;
+}
+
+.menu a:hover{
+    color: #fff;
+}
+
+/*PRUEBA INICIO*/
+.container-navbar.scrolled {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.container-navbar.scrolled .menu a {
+    color: #000000;
+}
+
+/* Deja la barra de navegación original en azul cuando el scroll no ha iniciado */
+.container-navbar {
+    background-color: var(--primary-color);
+}
+/*PRUEBA FIN*/
+
+/* ----------------BANNER--------------- */
+
+.banner {
+    background-image: linear-gradient(100deg, #000000, #00000020), url('Imagenes/Carne-Asada-Parrilla.jpg');
+    height: 60rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-banner{
+    max-width: 90rem;
+    margin:0 auto;
+    padding: 25rem 0;
+}
+
+.content-banner h2 {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.content-banner a{
+    margin-top: 2rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--primary-color);
+    display: inline-block;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    border-radius: 3rem;
+}
+
+/* ----------------SECCIONES--------------- */
+
+.main-content {
+    max-width: 125rem;
+    margin: 0 auto;
+    padding: 5rem 0;
+
+}
+/* ----------------SECCION "NOSOTROS"-------------- */
+.container-nosotros {
+    display: flex; /* Activa flexbox */
+    justify-content: flex-start;
+    max-width: 150rem;
+    margin: 0 auto;
+    padding: 20rem 15rem;
+    gap: 2rem; /* Espacio entre la imagen y el h1 */
+    align-items: center;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.text-nosotros {
+    display: flex;
+    flex-direction: column; /* Apila el <h1> y .container-us verticalmente */
+    gap: 1rem; /* Espacio entre el <h1> y el texto de .container-us */
+}
+
+.heading-1 {
+    color: #000000;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-weight: bold;
+    
+}
+
+.container-us {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+/* ----------------SECCION GALERIA--------------- */
+
+.container-galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 800px;
+    position: relative;
+    max-width: 800rem;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.heading-2 {
+    color: #000000;
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.imgContainer{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.slide_div{
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.container-galeria img {
+    position: relative;
+    height: 370px;
+    width: 240px;
+    transition: 0.7s;
+    border-radius: 20px;
+}
+
+.button{
+    position: absolute;
+    width: 240px;
+    height: 370px;
+    transition: 0.7s;
+    background-color: rgba(245,245,220,0.4);
+    border-radius: 20px;
+}
+
+.button:hover{
+    background-color: rgba(245,245,220,0.2);
+}
+
+#slider1:target ~ .imgContainer #img1,
+#slider1:target ~ .imgContainer #button1 {
+    width:390px;
+    height: 600px;
+    background-color: transparent;
+}
+
+#slider2:target ~ .imgContainer #img2,
+#slider2:target ~ .imgContainer #button2 {
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    
+}
+
+#slider3:target ~ .imgContainer #img3,
+#slider3:target ~ .imgContainer #button3 {
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    
+}
+
+#slider4:target ~ .imgContainer #img4,
+#slider4:target ~ .imgContainer #button4 {
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    
+}
+
+#slider5:target ~ .imgContainer #img5,
+#slider5:target ~ .imgContainer #button5 {
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    
+}
+
+#slider6:target ~ .imgContainer #img6,
+#slider6:target ~ .imgContainer #button6 {
+    width: 390px;
+    height: auto;
+    background-color: transparent;
+    
+}
+
+#slider7:target ~ .imgContainer #img7,
+#slider7:target ~ .imgContainer #button7 {
+    width: 390px;
+    height: auto;
+    background-color: transparent;
+    
+}
+
+#slider8:target ~ .imgContainer #img8,
+#slider8:target ~ .imgContainer #button8 {
+    width: 390px;
+    height: auto;
+    background-color: transparent;
+    
+}
+
+#slider9:target ~ .imgContainer #img9,
+#slider9:target ~ .imgContainer #button9 {
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    
+}
+
+#slider10:target ~ .imgContainer #img10,
+#slider10:target ~ .imgContainer #button10 {
+    width: 390px;
+    height: auto;
+    background-color: transparent;
+    
+}
+
+#slider11:target ~ .imgContainer #img11,
+#slider11:target ~ .imgContainer #button11 {
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    
+}
+
+#slider1:target ~ .imgContainer{
+    left: 100%;
+}
+
+#slider2:target ~ .imgContainer {
+    left: 80%;
+}
+
+#slider3:target ~ .imgContainer {
+    left: 60%;
+}
+
+#slider4:target ~ .imgContainer {
+    left: 40%;
+}
+
+#slider5:target ~ .imgContainer {
+    left: 20%;
+}
+
+#slider6:target ~ .imgContainer {
+    left: 0%;
+}
+
+#slider7:target ~ .imgContainer {
+    left: -20%;
+}
+
+#slider8:target ~ .imgContainer {
+    left: -40%;
+}
+
+#slider9:target ~ .imgContainer {
+    left: -60%;
+}
+
+#slider10:target ~ .imgContainer {
+    left: -80%;
+}
+
+#slider11:target ~ .imgContainer {
+    left: -100%;
+}
+
+/* ----------------SECCION ESPACIOS--------------- */
+.container-espacios {
+    display: flex; /* Activa flexbox */
+    justify-content: center;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 30rem 25rem;
+}
+
+.heading-3 {
+    color: #000000;
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* ----------------SECCION CONTACTO--------------- */
+
+.container-contacto {
+    display: flex; /* Activa flexbox */
+    justify-content: center;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 30rem 25rem;
+}
+
+.heading-4 {
+    color: #000000;
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
