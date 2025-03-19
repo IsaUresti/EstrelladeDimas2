@@ -29,18 +29,18 @@
             <!-- Formularios -->
 
             <div class="contenedor__login-register">
-                <form action="" class="formulario__login">
+                <form action="PHP/login_usuario_be.php" method="post" class="formulario__login">
                     <h2>Iniciar Sesión</h2>
-                    <input type="text" placeholder="Correo Electronico">
-                    <input type="password" placeholder="Contraseña">
+                    <input type="text" placeholder="Correo Electronico" name="correo" required>
+                    <input type="password" placeholder="Contraseña" name="contrasena" required>
                     <button>Entrar</button>
                 </form>
-                <form action="" class="formulario__register">
+                <form action="PHP/registro_usuario_be.php" method="POST" class="formulario__register">
                     <h2>Regístrarse</h2>
-                    <input type="text" placeholder="Nombre Completo" />
-                    <input type="text" placeholder="Correo Electronico" />
-                    <input type="tel" placeholder="Telefono" />
-                    <input type="password" placeholder="Contraseña" />
+                    <input type="text" placeholder="Nombre Completo" name="nombre_completo" required/>
+                    <input type="email" placeholder="Correo Electronico" name="correo" required/>
+                    <input type="tel" placeholder="Telefono" name="telefono" required/>
+                    <input type="password" placeholder="Contraseña" name="contrasena" required/>
                     <button>Regístrarse</button>
                 </form>
             </div>
