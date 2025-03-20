@@ -32,7 +32,7 @@ $isLoggedIn = isset($_SESSION['usuario']);
                 <div class="container-user">
                     <?php if ($isLoggedIn): ?>
                     <!-- Si el usuario está logueado, mostrar el icono de editar perfil y el botón de cerrar sesión -->
-                    <a href="EditProfile.php" style="text-decoration: none;">
+                    <a href="PHP/Perfil.php" style="text-decoration: none;">
                         <i class="fa-solid fa-pen" style="color: #011941;"></i> 
                     </a>
                     <a href="PHP/Cierre_Sesion.php" style="text-decoration: none;">
@@ -68,7 +68,10 @@ $isLoggedIn = isset($_SESSION['usuario']);
     <section class="banner">
         <div class="content-banner">
             <h2>Especialidad en carnes al carbon</h2>
-            <a href="#">Reservar</a>
+           <!-- Verificamos si el usuario está logueado -->
+        <a href="<?php echo $isLoggedIn ? 'Reservas.html' : 'Login.html'; ?>">
+            Reservar
+        </a>
         </div>
     </section>
 
