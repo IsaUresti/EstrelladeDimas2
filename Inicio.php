@@ -1,17 +1,18 @@
-﻿
+﻿<?php
+session_start();
 
+// Verificar si el usuario está logueado
+$isLoggedIn = isset($_SESSION['usuario']);
+?>
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>Estrella De Dimas</title>
     <link rel="stylesheet" href="CSS/Estilo.css" />
-    
 </head>
-
 <body>
-    
+
     <header>
         <!-- Inicio de encabezado -->
         <div class="container-hero">
@@ -23,19 +24,32 @@
                     </div>
                 </div>
                 <div class="customer-contact">
-                    <i class="fa-solid fa-phone" style="color: #011941" ;></i>
+                    <i class="fa-solid fa-phone" style="color: #011941"></i>
                     <div class="content-customer-contact">
                         <span class="number">444-123-3560</span>
                     </div>
                 </div>
                 <div class="container-user">
-                    <a href="Login.html" style="text-decoration: none;">
-                        <i class="fa-solid fa-user" style="color: #011941;"></i>
+                    <?php if ($isLoggedIn): ?>
+                    <!-- Si el usuario está logueado, mostrar el icono de editar perfil y el botón de cerrar sesión -->
+                    <a href="EditProfile.php" style="text-decoration: none;">
+                        <i class="fa-solid fa-pen" style="color: #011941;"></i> 
                     </a>
+                    <a href="PHP/Cierre_Sesion.php" style="text-decoration: none;">
+                        <button style="background: none; border: none; color: #011941; cursor: pointer;">
+                            <i class="fa-solid fa-sign-out-alt" style="color: #011941;"></i> Cerrar sesión
+                        </button>
+                    </a>
+                    <?php else: ?>
+                    <!-- Si el usuario no está logueado, mostrar el icono de iniciar sesión -->
+                    <a href="Login.html" style="text-decoration: none;">
+                        <i class="fa-solid fa-user" style="color: #011941;"></i> 
+                    </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
-        <!-- Barra de Navegacion -->
+        <!-- Barra de Navegación -->
         <div class="container-navbar" id="navbar">
             <nav class="navbar container">
                 <i class="fa-solid fa-bars" style="color: #011941;"></i>
@@ -49,6 +63,7 @@
             </nav>
         </div>
     </header>
+
     <!-- Inicio de imagen -->
     <section class="banner">
         <div class="content-banner">
@@ -56,6 +71,7 @@
             <a href="#">Reservar</a>
         </div>
     </section>
+
     <!-- Secciones del sitio -->
     <main class="main-content">
 
@@ -134,26 +150,19 @@
                 </div>
             </div>
 
-
-
         </section>
 
         <section class="container-espacios" id="Espacios">
             <h1 class="heading-3">ESPACIOS</h1>
-
         </section>
 
         <section class="container-contacto" id="Contacto">
             <h1 class="heading-4">CONTACTO</h1>
-
         </section>
     </main>
 
-    <!-- Codigo de iconos -->
+    <!-- Código de iconos -->
     <script src="https://kit.fontawesome.com/9fce921e25.js" crossorigin="anonymous"></script>
 
-
 </body>
-
-
 </html>

@@ -9,10 +9,10 @@ $contrasena = $_POST['contrasena'];
 //Hashea la contraseña
 $contrasena_hash = password_hash($contrasena, PASSWORD_DEFAULT);
 
-$query = "INSERT INTO usuarioss(nombre_completo, correo, telefono, contrasena) 
-         VALUES('$nombre_completo', '$correo', '$telefono', '$contrasena')";
+$query = "INSERT INTO usuariosss(nombre_completo, correo, telefono, contrasena) 
+         VALUES('$nombre_completo', '$correo', '$telefono', '$contrasena_hash')";
 
-$verificar_correo = mysqli_query($conexion, "SELECT * FROM usuarioss WHERE correo='$correo' ");
+$verificar_correo = mysqli_query($conexion, "SELECT * FROM usuariosss WHERE correo='$correo' ");
 
 if(mysqli_num_rows($verificar_correo) > 0){
     echo '

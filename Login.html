@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Estrella de Dimas 2</title>
-    <link rel="stylesheet" href="CSS/EstiloLogin.css" />
+    <link rel="stylesheet" href="CSS/EstiloLogin.css?v=2" />
 </head>
 <body>
 
@@ -33,14 +33,25 @@
                     <h2>Iniciar Sesión</h2>
                     <input type="text" placeholder="Correo Electronico" name="correo" required>
                     <input type="password" placeholder="Contraseña" name="contrasena" required>
+                    <div class="mostrar-contrasena">
+                        <input type="checkbox" id="mostrarContrasenaLogin">
+                        <label for="mostrarContrasenaLogin">Mostrar contraseña</label>
+                    </div>
                     <button>Entrar</button>
                 </form>
                 <form action="PHP/registro_usuario_be.php" method="POST" class="formulario__register">
                     <h2>Regístrarse</h2>
-                    <input type="text" placeholder="Nombre Completo" name="nombre_completo" required/>
-                    <input type="email" placeholder="Correo Electronico" name="correo" required/>
-                    <input type="tel" placeholder="Telefono" name="telefono" required/>
-                    <input type="password" placeholder="Contraseña" name="contrasena" required/>
+                    <input type="text" placeholder="Nombre Completo" name="nombre_completo" required />
+                    <input type="email" placeholder="Correo Electronico" name="correo" required />
+                    <input type="tel" placeholder="Telefono" name="telefono" required />
+                    <input type="password" placeholder="Contraseña" name="contrasena" required
+                           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.]{8,}$"
+                           title="La contraseña debe tener mínimo 8 caracteres, incluir una mayúscula, una minúscula, un número y un carácter especial." />
+                    <div class="mostrar-contrasena">
+                        <input type="checkbox" id="mostrarContrasenaRegistro">
+                        <label for="mostrarContrasenaRegistro">Mostrar contraseña</label>
+                    </div>
+                    <div class="error-message" style="color: red; display: none;"></div>
                     <button>Regístrarse</button>
                 </form>
             </div>

@@ -158,3 +158,20 @@ main{
         position: relative;
     }
 }
+
+.mostrar-contrasena {
+    align-items: center !important; /* Alineación vertical perfecta */
+    margin-top: 10px !important; /* Ajuste de margen para evitar que quede pegado */
+}
+
+.mostrar-contrasena input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #5a3d2b;  /* Color del checkbox */
+}
+
+.mostrar-contrasena label {
+    cursor: pointer;        /* Permite que el texto sea clickeable */
+    margin: 0;              /* Evita que haya margen extra */
+}

@@ -59,3 +59,43 @@ function register() {
     }
     
 }
+
+// Mostrar/Ocultar contraseña en el formulario de Login
+document.getElementById('mostrarContrasenaLogin').addEventListener('change', function () {
+    const inputContrasena = document.querySelector('.formulario__login input[name="contrasena"]');
+    if (inputContrasena) {
+        inputContrasena.type = this.checked ? 'text' : 'password';
+    }
+});
+
+// Mostrar/Ocultar contraseña en el formulario de Registro
+document.getElementById('mostrarContrasenaRegistro').addEventListener('change', function () {
+    const inputContrasena = document.querySelector('.formulario__register input[name="contrasena"]');
+    if (inputContrasena) {
+        inputContrasena.type = this.checked ? 'text' : 'password';
+    }
+});
+
+document.querySelector(".formulario__register").addEventListener("submit", function (event) {
+    const password = document.querySelector('.formulario__register input[name="contrasena"]').value;
+    const errorMessage = document.querySelector(".error-message"); // Elemento donde mostrar el mensaje
+
+    // Expresión regular para validar la contraseña
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (!regex.test(password)) {
+        errorMessage.textContent = "La contraseña no cumple con los requisitos mínimos. Debe incluir al menos una mayúscula, una minúscula, un número y un carácter especial.";
+        errorMessage.style.display = "block"; // Mostrar el mensaje de error
+        event.preventDefault(); // Prevenir el envío del formulario si la contraseña no es válida
+    } else {
+        errorMessage.style.display = "none"; // Ocultar mensaje de error si la contraseña es válida
+    }
+});
+
+// Mostrar/Ocultar contraseña en el formulario de Registro
+document.getElementById('mostrarContrasenaRegistro').addEventListener('change', function () {
+    const inputContrasena = document.querySelector('.formulario__register input[name="contrasena"]');
+    if (inputContrasena) {
+        inputContrasena.type = this.checked ? 'text' : 'password';
+    }
+});
